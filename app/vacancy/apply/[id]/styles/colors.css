@@ -1,0 +1,34 @@
+:root {
+    /* Primary color from the new website */
+    --primary-color: #123B8B;
+    --primary-color-light: #1a4ba3;
+    --primary-color-dark: #0d2d6b;
+
+    /* Secondary colors */
+    --secondary-color: #F2AF18;
+    --secondary-color-light: #f5c547;
+    --secondary-color-dark: #d99e15;
+    --accent-color: #f8f8f8;
+
+    /* Gradients */
+    --primary-gradient: linear-gradient(135deg, #123B8B 0%, #1a4ba3 100%);
+    --secondary-gradient: linear-gradient(135deg, #F2AF18 0%, #f5c547 100%);
+
+    /* Status colors */
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --error-color: #dc3545;
+    --info-color: #17a2b8;
+
+    /* Neutral colors */
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --gray: #6c757d;
+    --dark-gray: #343a40;
+    --black: #000000;
+
+    /* Shadows */
+    --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}

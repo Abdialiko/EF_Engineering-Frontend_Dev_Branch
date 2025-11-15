@@ -1,0 +1,137 @@
+.stepProgressContainer {
+    margin-bottom: 2rem;
+}
+
+.stepWrapper {
+    flex: 1;
+    text-align: center;
+}
+
+.stepCircle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid #dee2e6;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+}
+
+.stepCircle.completed {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+}
+
+.stepLabel {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    min-width: 80px;
+}
+
+.progressLine {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #e9ecef;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.progressLineFilled {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    background-color: #0d6efd;
+    transform: translateY(-50%);
+    z-index: 2;
+    transition: width 0.3s ease;
+}
+
+.formNavigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.btn {
+    border-radius: 0.375rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.formControl {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formControl:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.isInvalid {
+    border-color: #dc3545;
+}
+
+.isInvalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.invalidFeedback {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #dc3545;
+}
+
+.alert {
+    border: none;
+    border-radius: 0.375rem;
+}
+
+.confirmationIcon {
+    font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+    .stepLabel {
+        font-size: 0.7rem;
+        min-width: 60px;
+    }
+
+    .formNavigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .formNavigation button {
+        width: 100%;
+    }
+}
