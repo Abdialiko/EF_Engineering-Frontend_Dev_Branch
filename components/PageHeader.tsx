@@ -13,7 +13,14 @@ const PageHeader: React.FC<Props> = ({ title, backgroundImage = '/images/pagehea
     <section className="relative h-[380px] md:h-[480px] flex items-center justify-center text-white overflow-hidden">
       {/* Background */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={backgroundImage} alt={title} className="absolute inset-0 w-full h-full object-cover" />
+      <img 
+        src={backgroundImage} 
+        alt={title} 
+        decoding="async"
+        fetchPriority="high"
+        sizes="100vw"
+        className="absolute inset-0 w-full h-full object-cover" 
+      />
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
@@ -23,7 +30,7 @@ const PageHeader: React.FC<Props> = ({ title, backgroundImage = '/images/pagehea
           {breadcrumb.map((b, i) => (
             <span key={i}>
               {b.href ? (
-                <Link href={b.href} className="hover:text-[#F2AF18]">{b.label}</Link>
+                <Link href={b.href} className="hover:text-[#e34b11]">{b.label}</Link>
               ) : (
                 <span>{b.label}</span>
               )}

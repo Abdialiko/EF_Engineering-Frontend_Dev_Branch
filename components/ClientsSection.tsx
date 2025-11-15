@@ -103,14 +103,14 @@ const ClientsSection = () => {
       description: "Join our network of trusted partners",
       icon: <FaHandshake className="text-white text-2xl animate-icon-rotate" />,
       link: "/partner",
-      color: "from-[#F2AF18] to-[#f5c547]"
+      color: "from-[#e34b11] to-[#f05a2a]"
     },
     {
       title: "Contact Us",
       description: "Get in touch with our team",
       icon: <FaEnvelope className="text-white text-2xl animate-icon-bounce" />,
       link: "/contact",
-      color: "from-[#2596BE] to-[#3ba8d0]"
+      color: "from-[#e34b11] to-[#f05a2a]"
     }
   ];
 
@@ -123,7 +123,7 @@ const ClientsSection = () => {
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
               <RotatingGear size={50} />
-              <p className="text-[#2596BE] uppercase tracking-wider font-bold text-sm border border-[#2596BE] px-4 py-2 rounded-full">
+              <p className="text-[#05225c] uppercase tracking-wider font-bold text-xs sm:text-sm border border-[#05225c] px-3 sm:px-4 py-1 sm:py-2 rounded-full">
                 Our Clients
               </p>
             </div>
@@ -140,13 +140,13 @@ const ClientsSection = () => {
           <div className="flex items-center gap-2">
             <button 
               onClick={() => scrollByAmount(-300)} 
-              className="w-12 h-12 flex items-center justify-center bg-white shadow-lg hover:bg-[#2596BE] hover:text-white transition-all duration-300 hover-glow rounded-full group"
+              className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white shadow-lg hover:bg-[#05225c] hover:text-white transition-all duration-300 hover-glow rounded-full group"
             >
               <span className="text-xl group-hover:scale-110 transition-transform">‹</span>
             </button>
             <button 
               onClick={() => scrollByAmount(300)} 
-              className="w-12 h-12 flex items-center justify-center bg-gradient-to-r from-[#2596BE] to-[#3ba8d0] text-white shadow-lg hover:from-[#F2AF18] hover:to-[#f5c547] transition-all duration-300 hover-glow rounded-full group"
+              className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-gradient-to-r from-[#05225c] to-[#0a3a8a] text-white shadow-lg hover:from-[#e34b11] hover:to-[#f05a2a] transition-all duration-300 hover-glow rounded-full group"
             >
               <span className="text-xl group-hover:scale-110 transition-transform">»</span>
             </button>
@@ -173,12 +173,15 @@ const ClientsSection = () => {
                       isActive ? 'scale-110 opacity-100' : 'scale-90 opacity-40 grayscale'
                     }`}
                   >
-                    <div className="h-[80px] w-[160px] md:w-[200px] flex items-center justify-center bg-white rounded-lg shadow-md hover:shadow-xl p-4 hover-tilt transition-all duration-300 border border-gray-100 hover:border-[#F2AF18]/30 interactive-card">
+                    <div className="h-[80px] w-[160px] md:w-[200px] flex items-center justify-center bg-white rounded-lg shadow-md hover:shadow-xl p-4 hover-tilt transition-all duration-300 border border-gray-100 hover:border-[#e34b11]/30 interactive-card">
                       {src ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img 
                           src={src} 
-                          alt={name} 
+                          alt={name}
+                          decoding="async"
+                          fetchPriority="low"
+                          sizes="(max-width: 768px) 160px, 200px"
                           className="max-h-[60px] w-auto object-contain filter transition-all duration-300"
                           onError={(e:any)=>{(e.target as HTMLImageElement).src='/images/logo/newlogo.png'}} 
                         />
@@ -202,19 +205,19 @@ const ClientsSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
               {relatedContent.map((item, index) => (
                 <Link key={index} href={item.link}>
-                  <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl overflow-hidden interactive-card border border-gray-100 hover:border-[#F2AF18]/30">
+                  <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl overflow-hidden interactive-card border border-gray-100 hover:border-[#e34b11]/30">
                     <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${item.color} transition-all duration-500`}></div>
                     <div className="p-6 relative z-10">
                       <div className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
                         {item.icon}
                       </div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#F2AF18] transition-colors duration-300">
+                      <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#e34b11] transition-colors duration-300">
                         {item.title}
                       </h4>
                       <p className="text-gray-600 text-sm mb-4">
                         {item.description}
                       </p>
-                      <div className="flex items-center gap-2 text-[#2596BE] font-semibold text-sm uppercase tracking-wide group-hover:gap-4 transition-all duration-300">
+                      <div className="flex items-center gap-2 text-[#05225c] font-semibold text-xs sm:text-sm uppercase tracking-wide group-hover:gap-4 transition-all duration-300">
                         Explore
                         <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
                       </div>

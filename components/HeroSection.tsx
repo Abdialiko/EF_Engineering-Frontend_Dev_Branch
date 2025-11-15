@@ -634,14 +634,14 @@ const HeroSection = () => {
                   }}
                 >
                   {/* Animated gradient overlay - More colorful */}
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#F2AF18] via-[#f5c547] via-[#123B8B] to-[#F2AF18] opacity-0 group-hover:opacity-40 transition-opacity duration-500 animate-gradient-x" style={{ backgroundSize: '200% 200%' }}></span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-[#e34b11] via-[#f05a2a] via-[#05225c] to-[#e34b11] opacity-0 group-hover:opacity-40 transition-opacity duration-500 animate-gradient-x" style={{ backgroundSize: '200% 200%' }}></span>
                   
                   {/* Animated particles effect */}
                   <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <span className="absolute top-2 left-4 w-2 h-2 bg-[#F2AF18]/70 rounded-full animate-sparkle" style={{ animationDelay: '0s' }}></span>
-                    <span className="absolute top-4 right-8 w-1.5 h-1.5 bg-[#F2AF18]/60 rounded-full animate-sparkle" style={{ animationDelay: '0.3s' }}></span>
-                    <span className="absolute bottom-3 left-8 w-2 h-2 bg-[#F2AF18]/50 rounded-full animate-sparkle" style={{ animationDelay: '0.6s' }}></span>
-                    <span className="absolute bottom-4 right-4 w-1.5 h-1.5 bg-[#F2AF18]/80 rounded-full animate-sparkle" style={{ animationDelay: '0.9s' }}></span>
+                    <span className="absolute top-2 left-4 w-2 h-2 bg-[#e34b11]/70 rounded-full animate-sparkle" style={{ animationDelay: '0s' }}></span>
+                    <span className="absolute top-4 right-8 w-1.5 h-1.5 bg-[#e34b11]/60 rounded-full animate-sparkle" style={{ animationDelay: '0.3s' }}></span>
+                    <span className="absolute bottom-3 left-8 w-2 h-2 bg-[#e34b11]/50 rounded-full animate-sparkle" style={{ animationDelay: '0.6s' }}></span>
+                    <span className="absolute bottom-4 right-4 w-1.5 h-1.5 bg-[#e34b11]/80 rounded-full animate-sparkle" style={{ animationDelay: '0.9s' }}></span>
                   </span>
                   
                   {/* Shine effect - Enhanced with multiple layers */}
@@ -649,8 +649,8 @@ const HeroSection = () => {
                   <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1200 ease-in-out" style={{ animationDelay: '0.3s' }}></span>
                   
                   {/* Multi-layer glow effects */}
-                  <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl bg-[#F2AF18] -z-10 animate-pulse-glow"></span>
-                  <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-60 transition-opacity duration-700 blur-xl bg-[#f5c547] -z-10" style={{ animationDelay: '0.2s' }}></span>
+                  <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl bg-[#e34b11] -z-10 animate-pulse-glow"></span>
+                  <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-60 transition-opacity duration-700 blur-xl bg-[#f05a2a] -z-10" style={{ animationDelay: '0.2s' }}></span>
                   
                   {/* Content */}
                   <span className="relative z-10 flex items-center gap-2 sm:gap-3 transform transition-transform duration-300 group-hover:scale-105">

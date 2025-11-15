@@ -63,7 +63,7 @@ const StatsSection = () => {
   }, [hasScrolled]);
 
   return (
-    <section ref={ref} className="relative bg-gradient-to-br from-[#2596BE] via-[#1e7a9a] to-[#2596BE] py-20 sm:py-24 md:py-28 lg:py-32 overflow-hidden">
+    <section ref={ref} className="relative bg-gradient-to-br from-[#05225c] via-[#031a42] to-[#05225c] py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden">
       {/* Animated Backgrounds */}
       <EngineeringGrid opacity={0.05} />
       <FloatingShapes />
@@ -71,9 +71,9 @@ const StatsSection = () => {
 
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#F2AF18] rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#F2AF18] rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#2596BE] rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#e34b11] rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#e34b11] rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#05225c] rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -82,29 +82,29 @@ const StatsSection = () => {
             const Icon = stat.icon;
             return (
               <Reveal key={index} variant="scale" delay={index * 100}>
-                <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-2xl text-center border-2 border-white/20 hover:bg-white/20 transition-all duration-300 group relative overflow-hidden interactive-card hover:scale-105 hover:-translate-y-2">
+                <div className="bg-white/10 backdrop-blur-md p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-2xl text-center border-2 border-white/20 hover:bg-white/20 transition-all duration-300 group relative overflow-hidden interactive-card hover:scale-105 hover:-translate-y-2">
                   {/* Accent glow on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#F2AF18]/0 via-[#F2AF18]/0 to-[#F2AF18]/0 group-hover:from-[#F2AF18]/30 group-hover:via-[#F2AF18]/15 group-hover:to-[#F2AF18]/30 transition-all duration-500 rounded-2xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#e34b11]/0 via-[#e34b11]/0 to-[#e34b11]/0 group-hover:from-[#e34b11]/30 group-hover:via-[#e34b11]/15 group-hover:to-[#e34b11]/30 transition-all duration-500 rounded-2xl"></div>
                   
                   {/* Icon */}
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#F2AF18] to-[#f5c547] rounded-full mb-6 relative z-10 shadow-xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 animate-icon-pulse">
-                    <Icon className="w-10 h-10 text-[#2596BE]" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[#e34b11] to-[#f05a2a] rounded-full mb-4 sm:mb-6 relative z-10 shadow-xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 animate-icon-pulse">
+                    <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-[#05225c]" />
                   </div>
                   
                   {/* Counter */}
-                  <div className={`text-5xl sm:text-6xl md:text-7xl font-extrabold text-white mb-3 relative z-10 transition-all duration-500 ${
+                  <div className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-2 sm:mb-3 relative z-10 transition-all duration-500 ${
                     hasScrolled ? 'opacity-100 scale-100' : 'opacity-0 scale-50'
                   }`} style={{ transitionDelay: `${index * 100}ms` }}>
                     {counters[index]}{stat.suffix}
               </div>
 
                   {/* Label */}
-                  <div className="text-white/90 font-semibold uppercase tracking-wide text-sm md:text-base relative z-10">
+                  <div className="text-white/90 font-semibold uppercase tracking-wide text-xs sm:text-sm md:text-base relative z-10">
                     {stat.label}
                 </div>
 
                   {/* Decorative line */}
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-[#F2AF18] to-[#f5c547] group-hover:w-20 transition-all duration-500 rounded-full"></div>
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-[#e34b11] to-[#f05a2a] group-hover:w-20 transition-all duration-500 rounded-full"></div>
                 </div>
               </Reveal>
             );

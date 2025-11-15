@@ -25,7 +25,10 @@ const Reveal: React.FC<Props> = ({ children, delay = 0, className = '', variant 
           }
         });
       },
-      { threshold: 0.15 }
+      { 
+        threshold: 0.15,
+        rootMargin: '50px'
+      }
     );
 
     observer.observe(el);

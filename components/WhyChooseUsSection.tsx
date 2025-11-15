@@ -19,22 +19,22 @@ const FeatureItem = ({
 }) => {
   return (
     <Reveal variant="up" delay={delay}>
-      <div className="flex gap-4 py-6 border-t border-white/10 first:border-t-0 group hover:translate-x-3 transition-all duration-300 interactive-card">
-        <div className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-[#F2AF18] to-[#f5c547] rounded-xl flex-shrink-0 group-hover:bg-white group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg animate-icon-pulse">
-          <div className="text-[#2596BE] group-hover:text-[#2596BE]">
+      <div className="flex gap-3 sm:gap-4 py-4 sm:py-6 border-t border-white/10 first:border-t-0 group hover:translate-x-2 sm:hover:translate-x-3 transition-all duration-300 interactive-card">
+        <div className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center bg-gradient-to-br from-[#e34b11] to-[#f05a2a] rounded-lg sm:rounded-xl flex-shrink-0 group-hover:bg-white group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg animate-icon-pulse">
+          <div className="text-[#05225c] group-hover:text-[#05225c]">
         {icon}
           </div>
       </div>
       <div className="flex-1">
-          <h4 className="text-white text-xl font-extrabold tracking-wide mb-2 group-hover:text-[#F2AF18] transition-colors duration-300">
+          <h4 className="text-white text-lg sm:text-xl font-extrabold tracking-wide mb-1 sm:mb-2 group-hover:text-[#e34b11] transition-colors duration-300">
             {title}
           </h4>
-          <p className="text-white/70 text-[15px] leading-6">
+          <p className="text-white/70 text-sm sm:text-[15px] leading-5 sm:leading-6">
             {description}
           </p>
         </div>
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <FaCheckCircle className="text-[#F2AF18] text-xl" />
+          <FaCheckCircle className="text-[#e34b11] text-xl" />
         </div>
       </div>
     </Reveal>
@@ -43,7 +43,7 @@ const FeatureItem = ({
 
 const WhyChooseUsSection = () => {
   return (
-    <section className="relative py-20 sm:py-24 md:py-28 lg:py-32 overflow-hidden bg-gradient-to-br from-[#f8f8f8] via-white to-[#f0f7fa]">
+    <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden bg-gradient-to-br from-[#f8f8f8] via-white to-[#f0f7fa]">
       <EngineeringGrid opacity={0.03} />
       <FloatingShapes />
       
@@ -51,7 +51,7 @@ const WhyChooseUsSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden rounded-2xl lg:rounded-2xl shadow-2xl">
         {/* Left image */}
           <Reveal variant="left" delay={0}>
-            <div className="relative min-h-[520px] h-full overflow-hidden group hover:scale-105 transition-transform duration-500">
+            <div className="relative min-h-[400px] sm:min-h-[480px] md:min-h-[520px] h-full overflow-hidden group hover:scale-105 transition-transform duration-500">
           <Image
                 src="/images/hero/1.jpg"
             alt="Construction site with engineers"
@@ -61,20 +61,20 @@ const WhyChooseUsSection = () => {
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#2596BE]/30 via-[#2596BE]/10 to-transparent"></div>
-              <div className="absolute inset-0 bg-[#F2AF18]/0 group-hover:bg-[#F2AF18]/10 transition-colors duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#05225c]/30 via-[#05225c]/10 to-transparent"></div>
+              <div className="absolute inset-0 bg-[#e34b11]/0 group-hover:bg-[#e34b11]/10 transition-colors duration-300"></div>
         </div>
           </Reveal>
 
         {/* Right content */}
-          <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-[#1e7a9a] px-6 md:px-10 lg:px-12 py-12 md:py-16 flex flex-col justify-center relative overflow-hidden">
+          <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-[#031a42] px-4 sm:px-6 md:px-10 lg:px-12 py-8 sm:py-12 md:py-16 flex flex-col justify-center relative overflow-hidden">
             {/* Animated Backgrounds */}
             <MicroParticles count={20} />
             
             {/* Decorative background */}
             <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#F2AF18] rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#2596BE] rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#e34b11] rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#05225c] rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
             </div>
 
             <div className="relative z-10">
@@ -89,9 +89,9 @@ const WhyChooseUsSection = () => {
               
               <Reveal variant="up" delay={100}>
                 <h2 className="text-white text-4xl md:text-5xl lg:text-6xl leading-tight font-extrabold mb-6">
-                  Why <span className="text-[#F2AF18] relative inline-block">
+                  Why <span className="text-[#e34b11] relative inline-block">
                     Choose Us
-                    <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#F2AF18] to-[#f5c547] animate-line-expand"></span>
+                    <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#e34b11] to-[#f05a2a] animate-line-expand"></span>
                   </span>
                 </h2>
           </Reveal>
@@ -131,11 +131,11 @@ const WhyChooseUsSection = () => {
                 <div className="mt-10">
                   <Link
               href="#contact"
-                    className="group inline-flex items-center gap-3 bg-gradient-to-r from-[#F2AF18] to-[#f5c547] hover:from-[#2596BE] hover:to-[#3ba8d0] text-[#2596BE] hover:text-white px-8 py-4 font-bold uppercase tracking-wide rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
-            >
+                    className="group inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-[#e34b11] to-[#f05a2a] hover:from-[#05225c] hover:to-[#0a3a8a] text-white hover:text-white px-6 sm:px-8 py-3 sm:py-4 font-bold uppercase tracking-wide rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden text-sm sm:text-base"
+                  >
                     <span className="relative z-10">Learn More</span>
-                    <FaArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#2596BE] to-[#3ba8d0] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <FaArrowRight className="w-4 h-4 sm:w-5 sm:h-5 relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#05225c] to-[#0a3a8a] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </Link>
                 </div>
               </Reveal>

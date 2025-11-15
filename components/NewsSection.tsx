@@ -80,15 +80,15 @@ const NewsSection = () => {
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12">
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <FaNewspaper className="text-[#2596BE] text-xl animate-icon-bounce" />
-                <p className="text-[#2596BE] tracking-[.2em] text-xs font-bold uppercase">News & Blog</p>
+                <FaNewspaper className="text-[#05225c] text-lg sm:text-xl animate-icon-bounce group-hover:scale-110 transition-transform duration-300" />
+                <p className="text-[#05225c] tracking-[.2em] text-xs font-bold uppercase">News & Blog</p>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 uppercase title-underline inline-block">
                 Latest News & Articles
               </h2>
             </div>
             <Link href="/news">
-              <button className="mt-4 sm:mt-0 inline-flex items-center gap-2 bg-gradient-to-r from-[#2596BE] to-[#3ba8d0] hover:from-[#F2AF18] hover:to-[#f5c547] text-white px-6 py-3 font-semibold uppercase tracking-wide rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
+              <button className="mt-4 sm:mt-0 inline-flex items-center gap-2 bg-gradient-to-r from-[#05225c] to-[#0a3a8a] hover:from-[#e34b11] hover:to-[#f05a2a] text-white px-4 sm:px-6 py-2 sm:py-3 font-semibold uppercase tracking-wide rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg text-xs sm:text-sm">
                 View All News
                 <FaArrowRight className="w-4 h-4" />
               </button>
@@ -122,21 +122,23 @@ const NewsSection = () => {
                     <img
                       src={imageSrc}
                       alt={news.title}
-                      loading="eager"
-                      className={`w-full h-full object-cover transition-transform duration-500 ${
+                      decoding="async"
+                      fetchPriority={index < 3 ? "high" : "low"}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className={`w-full h-full object-cover transition-transform duration-500 will-change-transform ${
                         hoveredIndex === index ? 'scale-110' : 'scale-100'
                       }`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     {news.category && (
-                      <div className="absolute top-4 left-4 bg-gradient-to-r from-[#F2AF18] to-[#f5c547] text-[#2596BE] px-3 py-1 rounded-full text-xs font-bold uppercase shadow-lg">
+                      <div className="absolute top-4 left-4 bg-gradient-to-r from-[#e34b11] to-[#f05a2a] text-white px-3 py-1 rounded-full text-xs font-bold uppercase shadow-lg">
                         {news.category}
                       </div>
                     )}
                   </div>
                   
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-extrabold text-gray-900 leading-snug mb-4 group-hover:text-[#2596BE] transition-colors">
+                    <h3 className="text-lg sm:text-xl font-extrabold text-gray-900 leading-snug mb-3 sm:mb-4 group-hover:text-[#05225c] transition-colors">
                       {news.title}
                     </h3>
                     
@@ -156,7 +158,7 @@ const NewsSection = () => {
                     </p>
                     
                     <Link href={`/news/${news.id}`}>
-                      <div className="inline-flex items-center gap-2 text-[#2596BE] hover:text-[#F2AF18] font-semibold uppercase text-sm group/link transition-all duration-300">
+                      <div className="inline-flex items-center gap-2 text-[#05225c] hover:text-[#e34b11] font-semibold uppercase text-xs sm:text-sm group/link transition-all duration-300">
                         Read More
                         <FaArrowRight className={`w-4 h-4 transition-transform duration-300 ${
                           hoveredIndex === index ? 'translate-x-2' : ''
